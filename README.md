@@ -1,8 +1,8 @@
-### Análise de imagens no Vision Studio
+## Análise de imagens no Vision Studio
 
 Este projeto demonstra como utilizar o Vision Studio para analisar imagens. 
 
-## Processo 
+### Processo 
 
 1. Criar um recurso de Azure AI
 2. Conectar o serviço Azure AI ao Vision Studio
@@ -11,7 +11,26 @@ Este projeto demonstra como utilizar o Vision Studio para analisar imagens.
 5. Detecção de objetos
 6. Limpeza
 
-## Gerar legendas para uma imagem
+### Criar um recurso de Azure AI
+
+1. Em um browser, abra o [Portal Azure](https://portal.azure.com/?azure-portal=true), logando com uma conta associada com uma subscrição do Azure.
+2. Clique no botão **+ Create a resource** e pesquise por *Azure AI service*. Selecione  o plano **create a 
+Azure AI services**.
+3. Na página **Create Azure AI services**, configure-o com as seguintes configurações:
+- **Subscription**: *Sua subscrição Azure*.
+- **Resource group**: *Selecione ou crie um grupo de recurso com um nome único*.
+- **Region**: East US
+- **Name**: *Informe um nome único*.
+- **Pricing tier**: *Standard S0*.
+- **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected.*
+4. Selecione **Review + create** então **Create** e aguarde o deploy ser realizado.
+
+### Conectar o serviço Azure AI ao Vision Studio
+
+1. Em um browser, abra o [Vision Studio](https://portal.vision.cognitive.azure.com/), logando com uma conta associada com uma subscrição do Azure.
+2. Clique em **View all resources** e selecione o recurso criado anteriormente e clique em **Select as default resource**.
+
+### Gerar legendas para uma imagem
 
 1. Em um navegador, vá para o [Vision Studio](https://portal.vision.cognitive.azure.com/?azure-portal=true).
 2. Na página inicial **Introdução ao Vision**, selecione a guia **Análise de imagem** e, em seguida, seleciona o bloco **Adicionar legendas às imagens**.
@@ -28,7 +47,7 @@ Este projeto demonstra como utilizar o Vision Studio para analisar imagens.
 
 ![dense-caption-result.png](/outputs/dense-caption-result.png)
 
-## Marcação de imagens
+### Marcação de imagens
 
 1. Retorne para a página inicial do Vision Studio, e então selecione o bloc **Extraia tags comuns de imagens** na guia **Análise de imagem**.
 2. Em **Escolha o modelo que deseja experimentar**, deixe selecionado **Produto pré-construído vs. modelo de lacuna**. Em **Escolha seu idioma**, selecione **Inglês** ou um idioma de sua preferência.
@@ -40,7 +59,7 @@ Este projeto demonstra como utilizar o Vision Studio para analisar imagens.
 
 5. Revise a lista de tags extraídas da imagem e a pontuação de confiança de cada uma no painel de atributos detectados. Aqui a pontuação de confiança é probabilidade de o texto do atributo detectado descrever o que realmente está na imagem.
 
-## Detecção de objetos
+### Detecção de objetos
 
 1. Retorne para a página inicial do Vision Studio, e então selecione o bloc **Detecte objetos comuns em imagens** na guia **Análise de imagem**.
 2. Em **Escolha o modelo que deseja experimentar**, deixe selecionado **Produto pré-construído vs. modelo de lacuna**.
@@ -54,7 +73,7 @@ Este projeto demonstra como utilizar o Vision Studio para analisar imagens.
 
 ![detect-object-in-images-result2](/outputs/detect-object-in-images-result2.png)
 
-## Limpeza
+### Limpeza
 
 1. Abra o [Portal Azure](https://portal.azure.com/) e selecione o grupo de recursos que contém o recurso que você criou.
 2. Selecione o recurso e clique em **Deletar** e então **Sim** para confirmar. O recurso foi deletado.
